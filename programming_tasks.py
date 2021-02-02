@@ -43,19 +43,19 @@ def to_buy(*shopping_lists):
         total_list.append([goods, val[0], val[1]])
     # print(total_list)
 
-    for i in total_list:
-        print("{0:10}".format(i[0]), "{0:4} шт.".format(i[1]), "{0:5} руб.".format(i[2]))
-
     total_goods = 0
     total_bill = 0
     for goods, val in common_shopping_list.items():
         total_goods += val[0]
         total_bill += val[1]
 
+    for i in total_list:
+        print("{0:10}".format(i[0]), "{0:4} шт.".format(i[1]), "{0:5} руб.".format(i[2]))
     print("___________________________________")
     print(f"всего {total_goods} товаров на сумму {total_bill} руб.")
 
 
 to_buy(Max, Den, Ira)
+
 
 

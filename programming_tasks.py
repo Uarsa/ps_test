@@ -4,13 +4,13 @@ Max = {
     "пиво": [3, 80],
     "чипсы": [1, 90],
     "орешки": [1, 65],
-    "фрукты": [5, 25],
+    "рыбка": [5, 25],
 }
 
 Den = {
     "сухарики": [2, 25],
     "пиво": [4, 65],
-    "карты": [1, 250],
+    "кубики": [2, 150],
     "орешки": [2, 65],
 }
 
@@ -36,9 +36,12 @@ def to_buy(*shopping_lists):
             # у меня пока не вышло. что-то как-то близко, но не то:
             # common_shopping_list[goods] = common_shopping_list.get(goods, val) + [val[0], val[1]]
 
+    # print(common_shopping_list)
+
     total_list = []
     for goods, val in common_shopping_list.items():
-        total_list.append([goods, val[0], val[1]])
+        total_list.append([val[0], goods, val[1]])
+    # print(total_list)
 
     total_goods = 0
     total_bill = 0
@@ -46,8 +49,8 @@ def to_buy(*shopping_lists):
         total_goods += val[0]
         total_bill += val[1]
 
-    for i in total_list:
-        print("{0:10}".format(i[0]), "{0:4} шт.".format(i[1]), "{0:5} руб.".format(i[2]))
+    for i in sorted(total_list, reverse=True):
+        print("{0:10}".format(i[1]), "{0:4} шт.".format(i[0]), "{0:5} руб.".format(i[2]))
     print("___________________________________")
     print(f"всего {total_goods} товаров на сумму {total_bill} руб.")
 

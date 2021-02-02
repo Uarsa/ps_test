@@ -46,9 +46,9 @@ def to_buy(*shopping_lists):
         total_list.append([val[0], goods, val[1]])
 
     for i in sorted(total_list, reverse=True):
-        print("{0:12}".format(i[1]), "{0:5} шт.".format(i[0]), "{0:7} руб.".format(i[2]))
-    print("___________________________________")
-    print(f"ВСЕГО {total_goods} ТОВАРОВ НА СУММУ {total_bill} руб.")
+        print("{0:12}".format(i[1]), "{0:6} шт.".format(i[0]), "{0:9} руб.".format(i[2]))
+    print("______________________________________")
+    print(f"ВСЕГО {total_goods} ТОВАРА(ОВ) НА СУММУ {total_bill} руб.")
 
 
 to_buy(Max, Den, Ira)

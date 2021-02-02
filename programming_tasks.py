@@ -36,12 +36,9 @@ def to_buy(*shopping_lists):
             # у меня пока не вышло. что-то как-то близко, но не то:
             # common_shopping_list[goods] = common_shopping_list.get(goods, val) + [val[0], val[1]]
 
-    # print(common_shopping_list)
-
     total_list = []
     for goods, val in common_shopping_list.items():
         total_list.append([val[0], goods, val[1]])
-    # print(total_list)
 
     total_goods = 0
     total_bill = 0

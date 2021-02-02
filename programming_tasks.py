@@ -52,3 +52,5 @@ def to_buy(*shopping_lists):
 
 
 to_buy(Max, Den, Ira)
+
+

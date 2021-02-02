@@ -35,22 +35,22 @@ def to_buy(*shopping_lists):
             # у меня пока не вышло. что-то как-то близко, но не то:
             # common_shopping_list[goods] = common_shopping_list.get(goods, val) + [val[0], val[1]]
 
-    total_list = []
-    for goods, val in common_shopping_list.items():
-        total_list.append([val[0], goods, val[1]])
-
     total_goods = 0
     total_bill = 0
     for goods, val in common_shopping_list.items():
         total_goods += val[0]
         total_bill += val[1]
 
+    total_list = []
+    for goods, val in common_shopping_list.items():
+        total_list.append([val[0], goods, val[1]])
+
     for i in sorted(total_list, reverse=True):
         print("{0:10}".format(i[1]), "{0:4} шт.".format(i[0]), "{0:5} руб.".format(i[2]))
     print("___________________________________")
-    print(f"Всего {total_goods} товаров на сумму {total_bill} руб.")
-
-
-to_buy(Max, Den, Ira)
+    print(f"всего {total_goods} товаров на сумму {total_bill} руб.")
+    
+    
+ to_buy(Max, Den, Ira)
 
 

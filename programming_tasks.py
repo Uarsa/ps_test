@@ -31,7 +31,6 @@ def to_buy(*shopping_lists):
                 common_shopping_list[goods][1] += val[0] * val[1]
             else:
                 common_shopping_list[goods] = val
-
             # чувстсвуется, что тут можно как-то изящно через dict.get() сделать, но
             # у меня пока не вышло. что-то как-то близко, но не то:
             # common_shopping_list[goods] = common_shopping_list.get(goods, val) + [val[0], val[1]]

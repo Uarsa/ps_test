@@ -1,1 +1,1 @@
-new materials about the Python Community will be posted here
+new testing materials about the Python community will be posted here

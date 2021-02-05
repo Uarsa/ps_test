@@ -45,17 +45,17 @@ def union(*shopping_lists):
 if __name__ == "__main__":
     total_list = union(Max, Den, Ira)
     for k, v in total_list.items():
-        print("{0:10}".format(k), end=" ")
-        print("{0:4} шт.".format(v[0]), end=" ")
-        print("{0:5} руб.".format(v[1]))
+        print("{0:12}".format(k), end=" ")
+        print("{0:6} шт.".format(v[0]), end=" ")
+        print("{0:9} руб.".format(v[1]))
 
     total_goods = 0
     total_bill = 0
     for k, v in total_list.items():
         total_goods += v[0]
         total_bill += v[1]
-    print("___________________________________")
-    print(f"всего {total_goods} товаров на сумму {total_bill} руб.")
+    print("_" * 38)
+    print(f"ВСЕГО {total_goods} ТОВАРА(ОВ) НА СУММУ {total_bill} руб.")
 
     # Простейшее тестирование результатов, надо будет подчеркивать на занятиях
     assert total_goods == 25, "ошибка в кол-ве товаров"

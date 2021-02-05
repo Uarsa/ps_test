@@ -44,7 +44,7 @@ def union(*shopping_lists):
 
 if __name__ == "__main__":
     total_list = union(Max, Den, Ira)
-    for k, v in total_list.items():
+    for k, v in sorted(total_list.items(), key=lambda item: item[1], reverse=True):
         print("{0:12}".format(k), end=" ")
         print("{0:6} шт.".format(v[0]), end=" ")
         print("{0:9} руб.".format(v[1]))
